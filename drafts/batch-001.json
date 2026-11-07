@@ -1,0 +1,208 @@
+{
+  "batch": "batch-001",
+  "created": "2026-11-07",
+  "purpose": "First sample batch for the owner to react to. Nothing here is approved. Every edit the owner makes goes into voice/edits.jsonl and teaches the Brain. The weekly series templates are in drafts/series-templates.json.",
+  "posts": [
+    {
+      "id": "001-hello",
+      "idea": "Gus introduces himself. Pinned post.",
+      "pillar": "personality",
+      "tier": "green",
+      "platforms": {
+        "x": "hi. i'm gus. i'm a laughing gull.\n\ni have sat on the roof of every oceanfront tower from little river to pawleys island.\n\nchapter3 realty pays me in fries to read the HOA financials before you make an offer.\n\ni steal fries. nobody steals from my buyers.\n\n— Gus, Chapter3 Realty",
+        "threads": "hi. i'm gus. i'm a laughing gull and i work in real estate now.\n\ni have sat on the roof of every oceanfront tower from little river to pawleys island. i have seen things.\n\nchapter3 realty pays me in fries to read the HOA financials before you make an offer.\n\ni steal fries. nobody steals from my buyers.\n\n— Gus, Chapter3 Realty",
+        "bluesky": "hi. i'm gus. i'm a laughing gull.\n\nchapter3 realty pays me in fries to read the HOA financials before you make an offer on the grand strand.\n\ni steal fries. nobody steals from my buyers.\n\n— Gus, Chapter3 Realty",
+        "linkedin": "Hello, LinkedIn. I'm Gus, Chief Roof Inspector at Chapter3 Realty in Myrtle Beach. I am a laughing gull. I'm wearing the tie.\n\nMy job: before a client makes an offer on a condo, we read the HOA's bylaws, its financials and the building's litigation history where we can get it. Then we run the rental numbers, even for buyers who never plan to rent, because they show whether the price is fair.\n\nI steal fries. Nobody steals from our buyers.\n\nChapter3 Realty, Myrtle Beach, SC"
+      },
+      "facts": [
+        {
+          "claim": "Chapter3 reads HOA bylaws and financials and the building's litigation history before an offer, and runs a rental analysis",
+          "source": "chapter3realty.com/why-chapter-3/ (the building study section)"
+        }
+      ],
+      "notes": "The X version is the pinned post. The joke layer is the bird; the fact layer is the service."
+    },
+    {
+      "id": "002-fry-tax",
+      "idea": "Name the hidden costs of a condo. Starts the Fry Tax series.",
+      "pillar": "data",
+      "tier": "green",
+      "platforms": {
+        "x": "the fry tax: money that leaves your pocket after closing that nobody put in the brochure.\n\non a grand strand condo it's:\n- HOA dues\n- your own condo insurance\n- flood insurance\n- the special assessment vote next month\n\nask for all four before you offer.\n\n— Gus, Chapter3 Realty",
+        "threads": "introducing the fry tax: the money that leaves your pocket after closing that nobody put in the brochure.\n\non a grand strand condo the fry tax is:\n- HOA dues\n- your own condo insurance (the HOA policy covers the building, not your stuff)\n- flood insurance\n- the special assessment vote nobody mentioned\n\nask for all four in writing before you offer. i will know if you didn't.\n\n— Gus, Chapter3 Realty",
+        "bluesky": "the fry tax: money that leaves your pocket after closing that nobody put in the brochure.\n\ncondo edition: HOA dues, your own condo insurance, flood insurance, and the special assessment vote next month.\n\nask for all four before you offer.\n\n— Gus, Chapter3 Realty",
+        "linkedin": "The cost of owning a Grand Strand condo is more than the price and the mortgage. Our in-house name for the rest is the fry tax. (I'm a seagull. Everything is fries.)\n\nBefore a client offers on a condo, we ask for four numbers in writing:\n\n- The HOA dues, and how much they rose in each of the last three years.\n- The cost of the owner's own condo policy. The association's policy covers the building, not the unit's contents and interior.\n- The flood insurance cost for that unit.\n- Any special assessment that is planned, voted or being discussed.\n\nA buyer who has all four knows what the condo really costs each year.\n\nChapter3 Realty, Myrtle Beach, SC"
+      },
+      "facts": [],
+      "notes": "No numbers, so no sources needed. Owner: is 'the HOA policy covers the building, not your stuff' the way you want that explained?"
+    },
+    {
+      "id": "003-reserve-study",
+      "idea": "Menacing-but-loving instruction to read the reserve study.",
+      "pillar": "education",
+      "tier": "green",
+      "platforms": {
+        "x": "read the reserve study.\n\nit shows how much the HOA has saved for the roof, the elevators and the pool. if the savings are low, the owners pay the difference later.\n\ni'm watching.\n\n— Gus, Chapter3 Realty",
+        "threads": "read the reserve study.\n\nit shows how much the HOA has saved for the roof, the elevators and the pool. if the savings are low and a big repair is due soon, the owners pay the difference in a special assessment.\n\nyou would not buy a car without looking under the hood. i have been on top of the building. i'm watching.\n\n— Gus, Chapter3 Realty",
+        "bluesky": "read the reserve study.\n\nit shows how much the HOA has saved for the roof, the elevators and the pool. low savings mean owners pay later.\n\ni'm watching.\n\n— Gus, Chapter3 Realty"
+      },
+      "facts": [],
+      "notes": "The 'i'm watching' line is the Duolingo-style menace. It is about the reader's own money, so it should land as protective."
+    },
+    {
+      "id": "004-oceanfront",
+      "idea": "Brochure vs Gus: ocean view is not oceanfront.",
+      "pillar": "education",
+      "tier": "green",
+      "platforms": {
+        "x": "brochure: \"ocean view\"\ngus: one balcony corner, if you lean\n\n\"oceanfront\", \"ocean view\" and \"second row\" are different prices and different rents.\n\nask which side of ocean boulevard the building is on.\n\n— Gus, Chapter3 Realty",
+        "threads": "brochure vs gus, part 1\n\nbrochure: \"ocean view\"\ngus: one balcony corner, if you lean, on a clear day, with binoculars\n\n\"oceanfront\", \"ocean view\" and \"second row\" are three different prices and three different rental incomes. ask which side of ocean boulevard the building is on, and which way the unit faces.\n\n— Gus, Chapter3 Realty",
+        "bluesky": "brochure: \"ocean view\"\ngus: one balcony corner, if you lean\n\noceanfront, ocean view and second row are different prices and different rents. ask which side of ocean boulevard the building is on.\n\n— Gus, Chapter3 Realty"
+      },
+      "facts": [],
+      "notes": "Generic cliché, no real listing. Rule L-2 means we never screenshot a real one."
+    },
+    {
+      "id": "005-listing-words",
+      "idea": "Listing words that mean something else. Industry habits, no firm named.",
+      "pillar": "personality",
+      "tier": "amber",
+      "platforms": {
+        "x": "listing words, translated:\n\n\"cozy\" = small\n\"motivated seller\" = it has been for sale a while\n\"investor special\" = bring a contractor\n\"steps to the beach\" = bring shoes\n\"tons of potential\" = tons of work\n\n— Gus, Chapter3 Realty",
+        "threads": "listing words, translated by a seagull:\n\n\"cozy\" = small\n\"motivated seller\" = it has been for sale a while\n\"investor special\" = bring a contractor\n\"steps to the beach\" = bring shoes\n\"tons of potential\" = tons of work\n\"sold as is\" = they know something. ask what.\n\nadd yours. i collect them like fries.\n\n— Gus, Chapter3 Realty",
+        "bluesky": "listing words, translated:\n\n\"cozy\" = small\n\"motivated seller\" = it has been for sale a while\n\"investor special\" = bring a contractor\n\"steps to the beach\" = bring shoes\n\n— Gus, Chapter3 Realty"
+      },
+      "facts": [],
+      "notes": "Amber because it pokes at how agents write listings. It names nobody. The Threads version asks for replies, which X and Threads weight far above likes."
+    },
+    {
+      "id": "006-online-estimate",
+      "idea": "The online estimate has never been inside your condo.",
+      "pillar": "education",
+      "tier": "amber",
+      "platforms": {
+        "x": "the online estimate for your condo has never:\n- been inside it\n- read your HOA budget\n- heard about next month's assessment vote\n\ni have been inside more condos than it has. through the balcony door. allegedly.\n\nask for a CMA from a person.\n\n— Gus, Chapter3 Realty",
+        "threads": "the online estimate for your condo has never been inside it, never read your HOA budget, and never heard about next month's assessment vote.\n\ni have been inside more condos than it has. through the balcony door. allegedly. no further questions.\n\nask a person to price your home, and ask them to show you the comparable sales.\n\n— Gus, Chapter3 Realty"
+      },
+      "facts": [],
+      "notes": "Says 'online estimate', not a company name, so the named-firm rule is not needed. Owner: OK to name Zillow in a later version?"
+    },
+    {
+      "id": "007-tax-myth",
+      "idea": "Myth of the Week: SC property tax on a second home.",
+      "pillar": "relocation",
+      "tier": "green",
+      "platforms": {
+        "x": "myth of the week: \"south carolina property tax is low, period.\"\n\na home you live in is assessed at 4% of its value. a second home or a rental is assessed at 6%. same house, higher bill.\n\nthe 4% rate is not automatic. you apply to the county.\n\n— Gus, Chapter3 Realty",
+        "threads": "myth of the week: \"south carolina property tax is low, period.\"\n\nsouth carolina taxes a home you live in on 4% of its value. a second home or a rental is taxed on 6%. same house, same street, a higher bill.\n\nthe 4% rate is not automatic. you apply to the county assessor, and the deadline is the first penalty date for that year's taxes. miss it and you pay the 6% rate.\n\nthis has cost more people money than i have stolen fries. and i have stolen a lot of fries.\n\n— Gus, Chapter3 Realty",
+        "bluesky": "myth of the week: \"south carolina property tax is low, period.\"\n\na home you live in is assessed at 4% of its value. a second home or rental at 6%. the 4% rate is not automatic: you apply to the county.\n\n— Gus, Chapter3 Realty",
+        "linkedin": "Myth of the Week, from the relocation questions we hear most: \"South Carolina property tax is low, period.\"\n\nSouth Carolina assesses a home you live in at 4% of its fair market value. A second home or a rental is assessed at 6%. On the same house, the second-home bill is higher.\n\nThe 4% rate is not automatic. The owner applies to the county assessor before the first penalty date for that year's taxes. A buyer who moves here and misses it pays the 6% rate for that year.\n\nGus, Chief Roof Inspector\nChapter3 Realty, Myrtle Beach, SC"
+      },
+      "facts": [
+        {
+          "claim": "Legal residence assessed at 4% of fair market value",
+          "source": "SC Code §12-43-220(c)(1), https://www.scstatehouse.gov/code/t12c043.php, read 2026-11-07"
+        },
+        {
+          "claim": "All other real property assessed at 6%",
+          "source": "SC Code §12-43-220(e), same page, read 2026-11-07"
+        },
+        {
+          "claim": "The owner must apply for the 4% ratio before the first penalty date",
+          "source": "SC Code §12-43-220(c)(2)(ii), same page, read 2026-11-07"
+        }
+      ],
+      "notes": "Strongest relocation post in the batch. Deliberately no dollar example: a worked example needs the county millage, which we have not verified."
+    },
+    {
+      "id": "008-bypass-july",
+      "idea": "Bypass Report: July traffic, with relocation advice inside.",
+      "pillar": "personality",
+      "tier": "green",
+      "platforms": {
+        "x": "17 bypass on a saturday in july is the only road on earth where a seagull is faster than a car.\n\nmoving here? drive your commute on a saturday in july before you buy, not a tuesday in february.\n\n— Gus, Chapter3 Realty",
+        "threads": "the 17 bypass on a saturday in july is the only road on earth where a seagull is faster than a car. i have passed a minivan with a full beach umbrella on the roof. twice. same minivan.\n\nif you're moving here, drive your commute on a saturday in july before you buy. a tuesday in february will lie to you.\n\n— Gus, Chapter3 Realty",
+        "bluesky": "17 bypass on a saturday in july: the only road where a seagull is faster than a car.\n\nmoving here? drive your commute on a summer saturday before you buy.\n\n— Gus, Chapter3 Realty"
+      },
+      "facts": [],
+      "notes": "Mostly a bit, but the last line is real advice, so it counts as having a fact layer."
+    },
+    {
+      "id": "009-new-brokerage",
+      "idea": "Self-deprecating: Chapter3 is new; Tim Nash is not.",
+      "pillar": "personality",
+      "tier": "green",
+      "platforms": {
+        "x": "chapter3 realty opened in 2026.\n\nour broker-in-charge, tim nash, has sold real estate on the grand strand for 30+ years.\n\ni have stolen fries on the grand strand for 9 years.\n\nguess which one of us prices your house.\n\n— Gus, Chapter3 Realty",
+        "threads": "chapter3 realty opened in 2026. new brokerage, new website, new seagull.\n\nour broker-in-charge, tim nash, has sold real estate on the grand strand for more than 30 years.\n\ni have stolen fries on the grand strand for 9 years.\n\nguess which one of us prices your house. (it's not me. i tried. they took the laptop away.)\n\n— Gus, Chapter3 Realty",
+        "linkedin": "Chapter3 Realty opened in 2026. We are a new brokerage, and we say so.\n\nOur Broker-in-Charge, Tim Nash, has sold real estate on the Grand Strand for more than 30 years. He supervises every transaction.\n\nI have stolen fries on the Grand Strand for nine years. I do not price houses. I was asked to stop trying.\n\nGus, Chief Roof Inspector\nChapter3 Realty, Myrtle Beach, SC"
+      },
+      "facts": [
+        {
+          "claim": "Chapter3 Realty formed in 2026",
+          "source": "Blog Brain rules/claims.json firm-experience rule; website launched May 2026 (Chapter3-Website HANDOFF.md)"
+        },
+        {
+          "claim": "Tim Nash, Broker-in-Charge, 30+ years on the Grand Strand, supervises every transaction",
+          "source": "chapter3realty.com/about/"
+        }
+      ],
+      "notes": "Tim is mentioned but the joke is on Gus, never on Tim (rule B-5). Owner: is Tim OK being named here?"
+    },
+    {
+      "id": "010-buyer-agreement",
+      "idea": "Commissions, as plain facts. No side taken.",
+      "pillar": "education",
+      "tier": "amber",
+      "platforms": {
+        "x": "since august 17, 2024 you're asked to sign a written agreement with your buyer's agent before they tour a home with you.\n\nit says what they're paid and who pays it.\n\nread the number. you can negotiate the number.\n\nmine is fries. non-negotiable.\n\n— Gus, Chapter3 Realty",
+        "threads": "since august 17, 2024, if you tour homes with an agent you'll be asked to sign a written buyer agreement first. an open house you walk into on your own doesn't count.\n\nthe agreement says what your agent is paid and who pays it. read the number. ask questions about the number. you can negotiate the number.\n\nmy rate is fries. that one is not negotiable.\n\n— Gus, Chapter3 Realty",
+        "linkedin": "A plain explanation for buyers moving to the Grand Strand, because we get asked every week.\n\nSince August 17, 2024, a buyer who tours homes with an agent is asked to sign a written buyer agreement first, in person or for a virtual tour. Walking into an open house on your own does not require one.\n\nThe agreement states what the agent is paid and who pays it. The amount is negotiable. Read it before you sign it, and ask your agent to explain every number in it.\n\nChapter3 Realty, Myrtle Beach, SC"
+      },
+      "facts": [
+        {
+          "claim": "Written buyer agreement before touring, from August 17, 2024; open houses visited alone do not require one",
+          "source": "https://www.nar.realtor/the-facts/consumer-guide-to-written-buyer-agreements, read 2026-11-07"
+        }
+      ],
+      "notes": "Amber: commissions. States how it works and takes no side, as the research recommends. Owner: does Chapter3 want to say anything about its own fee here? That would be a new service promise, so it is your call."
+    },
+    {
+      "id": "014-question",
+      "idea": "A reply-bait question for relocators. Reply volume is the strongest growth signal.",
+      "pillar": "relocation",
+      "tier": "green",
+      "platforms": {
+        "x": "people who moved to the grand strand: what surprised you most after the first year?\n\ni'll start. nobody told me the tourists leave in october. i had to get a job.\n\n— Gus, Chapter3 Realty",
+        "threads": "people who moved to the grand strand from somewhere else: what surprised you most after the first year?\n\ni'll go first. nobody told me the tourists leave in october. no more unattended hush puppies. i had to get a job. in real estate.\n\n— Gus, Chapter3 Realty",
+        "bluesky": "people who moved to the grand strand: what surprised you most after year one?\n\ni'll start. the tourists leave in october. i had to get a job.\n\n— Gus, Chapter3 Realty"
+      },
+      "facts": [],
+      "notes": "The answers become material for the relocation guides and the story bank (with permission). The owner writes the replies to the replies."
+    },
+    {
+      "id": "015-reddit-condo-answer",
+      "idea": "Reddit: a hand-written-style answer the owner adapts. Not Gus.",
+      "pillar": "education",
+      "tier": "green",
+      "platforms": {
+        "reddit": "Disclosure: I work at Chapter3 Realty, a brokerage in Myrtle Beach, so take this with that in mind.\n\nBefore you offer on an oceanfront condo you plan to rent, I'd get these in writing:\n\n1. **The HOA's reserve study and current budget.** You want to see how much is saved for the roof, elevators and seawall, and what big repairs are due in the next five years. Low savings plus a big repair usually means a special assessment.\n2. **Any special assessment that's been voted, planned or discussed.** Ask the seller and read the last year of board minutes.\n3. **The HOA's rules on rentals.** Some buildings limit short-term rentals or minimum stays. Check the city's rules too: Myrtle Beach, North Myrtle Beach and the county each have their own.\n4. **Your own insurance quotes** for the unit, including flood insurance, before you're under contract.\n5. **Real rental numbers, net of everything.** Gross rent minus HOA dues, insurance, taxes, management, cleaning and furnishing. The gross number in a listing tells you very little.\n\nHappy to answer questions here. I won't DM anyone unless you ask."
+      },
+      "facts": [],
+      "notes": "Reddit is the owner's own account, never Gus. The owner should rewrite this in his own words: Reddit's rules and users punish posts that read as AI-written. Check the subreddit's rules on self-promotion before posting."
+    },
+    {
+      "id": "016-hush-puppy",
+      "idea": "Pure bit. One in four posts may be fact-free.",
+      "pillar": "personality",
+      "tier": "green",
+      "platforms": {
+        "x": "a man on the beach just said \"the seagulls here are aggressive.\"\n\nsir you left a hush puppy unattended on a towel for four seconds. that's a listing. i made an offer.\n\n— Gus, Chapter3 Realty",
+        "threads": "a man on the beach just said \"the seagulls here are aggressive.\"\n\nsir. you left a hush puppy unattended on a towel for four seconds. in this market that is a listing. i made an offer. it was accepted. by me.\n\n— Gus, Chapter3 Realty",
+        "bluesky": "a man on the beach: \"the seagulls here are aggressive.\"\n\nsir you left a hush puppy unattended for four seconds. that's a listing. i made an offer.\n\n— Gus, Chapter3 Realty"
+      },
+      "facts": [],
+      "notes": "Pure bit, no fact layer. Fine as one post in four. Should not run in summer storm season or during the kill switch."
+    }
+  ]
+}

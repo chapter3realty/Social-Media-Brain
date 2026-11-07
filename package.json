@@ -1,0 +1,11 @@
+{
+  "name": "social-media-brain",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Chapter3 Realty's social media system: Gus's voice, the compliance checker, the storm kill switch and the drafts.",
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "check": "node tools/check.js",
+    "killswitch": "node tools/killswitch.js"
+  }
+}

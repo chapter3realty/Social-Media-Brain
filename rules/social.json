@@ -1,0 +1,252 @@
+{
+  "_comment": "Rules for social posts, on top of rules/blog-claims.json (copied from Blog-Brain rules/claims.json at 938d82d, 2026-11-04; re-copy when that file changes). Severity: block = cannot publish; fix = change it, or the owner overrides with a logged reason; review = the owner looks closely (amber topic). Patterns are JavaScript regex source, case-insensitive unless 'flags' says otherwise. 'unless' skips a match when the whole post also matches it. Each rule has passing and failing controls in test/check.test.js. Not legal advice: counsel sets the final list. Section numbers and evidence: research_notes/Social media personality for Chapter3/compliance_rules.md.",
+  "rules": [
+    {
+      "id": "placeholder",
+      "severity": "block",
+      "why": "S-5: a number that has not been filled in from a source on file.",
+      "patterns": [
+        "\\{DATA:[^}]*\\}",
+        "\\bTODO\\b",
+        "\\bTK\\b"
+      ],
+      "flags": "",
+      "fix": "Fill it from Chapter3's dataset or a public source, and add the source to the draft's facts list."
+    },
+    {
+      "id": "street-address",
+      "severity": "block",
+      "why": "L-2, SC Code 40-57-135(E)(1): an address or MLS number is advertising of that property. Another firm's property needs written permission and 'listed by [firm]'.",
+      "patterns": [
+        "\\b\\d{2,6}\\s+(?:[NSEW]\\.?\\s+)?[A-Z][a-z]+(?:\\s[A-Z][a-z]+){0,3}\\s(?:St|Street|Ave|Avenue|Rd|Road|Dr|Drive|Blvd|Boulevard|Ln|Lane|Ct|Court|Way|Hwy|Highway|Cir|Circle|Pl|Place|Ter|Terrace|Pkwy|Parkway|Trl|Trail)\\b",
+        "\\bMLS\\s*(?:#|No\\.?|number)?\\s*\\d{5,}\\b"
+      ],
+      "flags": "",
+      "unlessField": "listingAuthorization",
+      "fix": "Remove the address. For a Chapter3 listing or one with written permission on file, set listingAuthorization on the draft and add 'listed by [firm]'."
+    },
+    {
+      "id": "payment-terms",
+      "severity": "block",
+      "why": "L-6, Reg Z 12 CFR 1026.24: a payment amount, down payment, loan term or APR triggers full credit disclosures. Chapter3 is not a lender.",
+      "patterns": [
+        "\\b(?:monthly|mortgage|house|loan) payments?\\b[^.\\n]{0,30}\\$\\s?\\d",
+        "\\$\\s?[\\d,.]+k?\\s*(?:/|a|per)\\s*mo(?:nth)?\\b[^.\\n]{0,30}\\b(?:payment|mortgage|loan|PITI)\\b",
+        "\\b\\d{1,2}(?:\\.\\d+)?\\s?(?:%|percent)\\s*down\\b",
+        "\\$\\s?[\\d,.]+k?\\s*down\\b",
+        "\\bdown payments? of \\$",
+        "\\b(?:10|15|20|25|30|40)[- ]year (?:fixed|mortgage|loan|term|ARM)\\b",
+        "\\bAPR\\b",
+        "\\bas low as \\$"
+      ],
+      "fix": "Keep financing qualitative: 'your lender quotes the real numbers'. Rent, HOA fees, taxes and insurance amounts are fine."
+    },
+    {
+      "id": "guarantee",
+      "severity": "block",
+      "why": "S-7: a promise about money or prices is misleading advertising (SC 40-57-710; FTC Act s.5).",
+      "patterns": [
+        "\\bguarantee(?:d|s)?\\b",
+        "\\bcan(?:'|’)?t lose\\b",
+        "\\bcannot lose\\b",
+        "\\brisk[- ]free\\b",
+        "\\balways (?:goes|go|went) up\\b",
+        "\\bnever (?:goes|go|went) down\\b",
+        "\\bsure thing\\b"
+      ],
+      "fix": "Say what happened, with the date and the source. Never what will happen."
+    },
+    {
+      "id": "property-management",
+      "severity": "block",
+      "why": "B-3: Chapter3 does no property management (Blog Brain BIZ-5).",
+      "patterns": [
+        "\\bwe(?:'ll| will)? (?:manage|screen|collect rent|handle (?:the )?evictions?)\\b",
+        "\\b(?:our|chapter ?3(?: realty)?) property management\\b",
+        "\\bwe(?:'ll| will)? (?:run|manage) your (?:rental|airbnb|vacation rental|str)\\b"
+      ],
+      "fix": "Chapter3 helps people buy and sell. Management is a separate company's job."
+    },
+    {
+      "id": "age-restricted",
+      "severity": "block",
+      "why": "L-5, HOPA 42 USC 3607(b): adults-only or 55+ wording is legal only for a community that qualifies. Otherwise it is familial-status discrimination.",
+      "patterns": [
+        "\\b55\\s?\\+",
+        "\\b55 (?:and|or) (?:over|older|up)\\b",
+        "\\bover[- ]55\\b",
+        "\\badults?[- ]only\\b",
+        "\\bno (?:kids|children)\\b",
+        "\\bage[- ]restricted\\b",
+        "\\bseniors? only\\b"
+      ],
+      "unlessField": "verified55",
+      "fix": "Remove it, or name a community on the verified 55+ list and set verified55 on the draft."
+    },
+    {
+      "id": "fair-housing-social",
+      "severity": "fix",
+      "why": "L-4, 42 USC 3604(c) and 24 CFR 100.75: words about who a place suits, or who lives there, can be steering. These add to Blog Brain's fair-housing rule.",
+      "patterns": [
+        "\\bempty[- ]nesters?\\b",
+        "\\bperfect for (?:empty|retired|seniors?|grandparents|newlyweds|bachelors?|professionals|young)\\b",
+        "\\bgreat for (?:families|kids|retirees|seniors?|couples|singles)\\b",
+        "\\bbachelor pad\\b",
+        "\\b(?:low|high)[- ]crime\\b",
+        "\\bcrime\\b",
+        "\\bexclusive (?:neighborhood|community|area)\\b",
+        "\\b(?:handicap(?:ped)?|able[- ]bodied)\\b",
+        "\\bno section 8\\b",
+        "\\benglish[- ]speaking\\b",
+        "\\b(?:church|churches|synagogue|mosque|temple)\\b",
+        "\\b(?:christian|jewish|muslim|catholic)\\b",
+        "\\bmature (?:adults?|couples?|people|buyers?)\\b"
+      ],
+      "unless": "\\bfair housing\\b",
+      "fix": "Describe the property and the place: size, distance, price, rules. Never the people."
+    },
+    {
+      "id": "realtor-mark",
+      "severity": "fix",
+      "why": "L-12: REALTOR is NAR's trademark, for members only, and never a generic word for 'agent'. Membership is not yet confirmed.",
+      "patterns": [
+        "\\brealtors?\\b(?!\\.com)",
+        "\\brealtor®"
+      ],
+      "fix": "Write 'agent' or 'real estate agent'."
+    },
+    {
+      "id": "free-service",
+      "severity": "fix",
+      "why": "NAR SoP 12-1 (if a member): 'free' for a brokerage service needs its conditions stated. The free investor tool is not a brokerage service and is fine.",
+      "patterns": [
+        "\\bfree (?:representation|buyer'?s? agent|agent|consultation|CMA|home valuation|market analysis)\\b"
+      ],
+      "fix": "State the condition, or call it what it is: 'we'll run the numbers on your house, no charge, no obligation'."
+    },
+    {
+      "id": "ai-vocabulary",
+      "severity": "fix",
+      "why": "Blog Brain WORD-4, and LinkedIn's 2026 classifier cuts views of generic AI-sounding posts by about 40%.",
+      "patterns": [
+        "\\bdelv(?:e|es|ing)\\b",
+        "\\bleverag(?:e|es|ing)\\b",
+        "\\bnavigat(?:e|es|ing)\\b",
+        "\\bunlock(?:s|ing)?\\b",
+        "\\bfoster(?:s|ing)?\\b",
+        "\\bcrucial\\b",
+        "\\bpivotal\\b",
+        "\\bvibrant\\b",
+        "\\bdynamic\\b",
+        "\\brobust\\b",
+        "\\bseamless(?:ly)?\\b",
+        "\\bjourney\\b",
+        "\\blandscape\\b",
+        "\\bgame[- ]changer\\b",
+        "\\bin today'?s (?:market|world|landscape)\\b",
+        "\\belevate\\b",
+        "\\bembark\\b"
+      ],
+      "fix": "Say the plain thing."
+    },
+    {
+      "id": "testimonial",
+      "severity": "review",
+      "why": "L-8 and L-9, FTC 16 CFR 465 and 255: a client's words need written consent on file. Invented clients are illegal.",
+      "patterns": [
+        "\\b(?:a|one|our) (?:client|buyer|seller|customer)s? (?:said|says|told|wrote)\\b",
+        "\\b5[- ]stars?\\b",
+        "★",
+        "\\breviewed us\\b",
+        "\\btestimonial\\b"
+      ],
+      "fix": "Confirm the consent is on file and the words are exact. Otherwise remove it."
+    },
+    {
+      "id": "deal-claim",
+      "severity": "review",
+      "why": "SC 40-57-710: a claim of a sale, a closing or a listing must match a documented Chapter3 transaction. Gus is a cartoon and has never sold anything.",
+      "patterns": [
+        "\\b(?:we|i|chapter ?3(?: realty)?)(?: just)? (?:sold|closed|listed)\\b",
+        "\\bour (?:listing|buyers?|sellers?|clients?) (?:closed|sold|got|saved)\\b",
+        "\\bjust (?:sold|closed)\\b"
+      ],
+      "fix": "Name the documented transaction in the draft's facts, or remove the claim."
+    },
+    {
+      "id": "named-firm",
+      "severity": "review",
+      "why": "L-10, NAR Article 15 and SC defamation law: anything said about another firm or agent must be true and provable. Opinion about a national company's product is allowed; a local firm is never the joke.",
+      "patterns": [
+        "\\b(?!Chapter)[A-Z][\\w&'.-]+(?:[ ][A-Z][\\w&'.-]+){0,3}[ ](?:Realty|Real Estate|Properties|Realtors|Homes|Builders)\\b",
+        "\\b(?:Zillow|Redfin|Compass|Keller Williams|RE/MAX|Coldwell Banker|Century 21|eXp|Berkshire Hathaway|Sotheby'?s|Opendoor|Offerpad|Homes\\.com|Realtor\\.com|Trulia)\\b"
+      ],
+      "flags": "",
+      "fix": "Check every factual claim about them is true with a source on file. Never mock a local firm."
+    },
+    {
+      "id": "named-building",
+      "severity": "review",
+      "why": "L-11 and website non-negotiable 5: no conclusion about a named building, HOA or builder. Observable, dated facts only.",
+      "patterns": [
+        "\\b(?!(?:The|A|An|Your|This|That|Each|Every|Our|Their|Its|Any|My|Myrtle|Grand|North|South)\\b)[A-Z][a-z]+(?:[ ][A-Z][a-z]+){0,3}[ ](?:Tower|Towers|Resort|Condominiums?|Condos|Plantation|HOA|POA|Villas|Club)\\b"
+      ],
+      "flags": "",
+      "fix": "Keep only dated, sourced facts (fee, assessment amount, date). No adjectives about the building or its board."
+    },
+    {
+      "id": "prediction",
+      "severity": "review",
+      "why": "S-6: a call about the future goes in ledger/predictions.md and is graded in public. A wrong crash call costs a broker credibility with sellers.",
+      "patterns": [
+        "\\b(?:prices|rents|values|inventory|sales|the market|home prices|condo prices)\\b[^.\\n]{0,40}\\b(?:will|going to|gonna|expected to|about to)\\b",
+        "\\b(?:crash|bubble|boom)\\b"
+      ],
+      "fix": "Log it in ledger/predictions.md with the date, the number and the date it will be graded."
+    },
+    {
+      "id": "commissions",
+      "severity": "review",
+      "why": "Amber topic: the most viral subject in real estate and the one most likely to anger other agents. State how it works, with the date, never who is right.",
+      "patterns": [
+        "\\bcommissions?\\b",
+        "\\bNAR settlement\\b",
+        "\\bbuyer[- ]broker agreements?\\b",
+        "\\bbuyer'?s? (?:agent|broker) (?:fee|compensation|commission)\\b"
+      ],
+      "fix": "Facts only: what the agreement says, who pays, that it is negotiable."
+    },
+    {
+      "id": "politics",
+      "severity": "review",
+      "why": "Amber topic. Legal, but it can make enemies in town, and SC 16-17-560 limits how Chapter3 can police staff politics.",
+      "patterns": [
+        "\\b(?:trump|biden|harris|vance|obama|democrats?|republicans?|maga|gop|liberals?|conservatives?|woke)\\b",
+        "\\b(?:city council|county council|mayor|ordinance|zoning|rezoning|governor|legislature|statehouse)\\b"
+      ],
+      "fix": "Say what the vote or rule does to an owner or buyer, with the date. No party, no person."
+    },
+    {
+      "id": "do-not-joke",
+      "severity": "review",
+      "why": "Do-not-joke list: these subjects get literal, useful posts only. The kill switch blocks joke posts during active storm alerts.",
+      "patterns": [
+        "\\b(?:hurricane|tropical storm|storm surge|tornado)\\b",
+        "\\bflood(?:s|ed|ing)?\\b(?!\\s(?:insurance|zones?|maps?|history|elevation|policy|policies|risk|certificate))",
+        "\\b(?:drown(?:ed|ing|s)?|rip currents?)\\b",
+        "\\b(?:died|death|deaths|dead|killed|shooting|murder)\\b",
+        "\\b(?:foreclos(?:e|ed|ure|ures)|eviction|evicted|bankrupt(?:cy)?)\\b"
+      ],
+      "fix": "No joke on this subject. Keep the useful fact only, or wait."
+    },
+    {
+      "id": "team-mention",
+      "severity": "review",
+      "why": "B-5: Tim may be mentioned. He is never the joke.",
+      "patterns": [
+        "\\b(?:Tim|Timmy)\\b(?:\\s(?:Fredrick\\s)?Nash)?"
+      ],
+      "fix": "Check the sentence about Tim is literal and respectful. Use 'Tim Nash' in every visible place."
+    }
+  ]
+}

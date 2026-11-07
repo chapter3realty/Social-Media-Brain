@@ -1,0 +1,42 @@
+{
+  "batch": "series-templates",
+  "created": "2026-11-07",
+  "purpose": "Recurring series. Each is blocked by the checker until every {DATA:...} is filled from a source and the filled copy is moved into a dated batch.",
+  "posts": [
+    {
+      "id": "friday-numbers",
+      "idea": "Friday Numbers template. Weekly data post with one chart.",
+      "pillar": "data",
+      "tier": "amber",
+      "stormSafe": false,
+      "platforms": {
+        "x": "friday numbers, grand strand, week of {DATA:week}\n\nhomes for sale: {DATA:active}\nmonths of supply: {DATA:mos}\nmedian days on market: {DATA:dom}\n\ngus's read: {DATA:take}\n\n— Gus, Chapter3 Realty",
+        "linkedin": "Friday Numbers: the Grand Strand housing market, week of {DATA:week}.\n\nHomes for sale: {DATA:active}\nMonths of supply: {DATA:mos}\nMedian days on market: {DATA:dom}\n\nWhat it means for a seller: {DATA:seller_take}\nWhat it means for a buyer: {DATA:buyer_take}\n\nChart attached. Source: {DATA:source}.\n\nChapter3 Realty, Myrtle Beach, SC"
+      },
+      "facts": [],
+      "notes": "Template. Blocked until the numbers are filled. Open question for the owner: which MLS, and may its numbers be posted on social? Until then, use Chapter3's own datasets or public sources."
+    },
+    {
+      "id": "roof-report",
+      "idea": "Roof Report template: one building-level number from Chapter3's data.",
+      "pillar": "data",
+      "tier": "amber",
+      "platforms": {
+        "x": "roof report 🪶\n\ni sat on the roof of an oceanfront tower in {DATA:town}. here's what the HOA records say:\n\n{DATA:fact_1}\n{DATA:fact_2}\n\nnet rental return after HOA, insurance and taxes: {DATA:net_return}\n\nthe brochure said \"investment opportunity.\"\n\n— Gus, Chapter3 Realty"
+      },
+      "facts": [],
+      "notes": "Template. The building is described, not named, unless every fact is dated and sourced (rule L-11). Pull from the website's building-level rental return data."
+    },
+    {
+      "id": "prediction-ledger",
+      "idea": "Start the prediction ledger. Gus makes a call and promises to be graded.",
+      "pillar": "data",
+      "tier": "amber",
+      "platforms": {
+        "x": "starting the gus prediction ledger.\n\nevery quarter i make one call about the grand strand market, write it down, and grade it in public.\n\nq1 2027 call: {DATA:prediction}\n\nif i'm wrong you may call me a stupid bird. once.\n\n— Gus, Chapter3 Realty"
+      },
+      "facts": [],
+      "notes": "Template. The call itself is the owner's or comes from Chapter3's data; it goes in ledger/predictions.md with the grading date."
+    }
+  ]
+}
